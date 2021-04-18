@@ -60,6 +60,7 @@ class PortfolioGallary extends Component {
     
 
     render() { 
+        console.log("PortfolioGallary mounted");
         return ( 
             <div className="container">
 							  
@@ -78,7 +79,7 @@ class PortfolioGallary extends Component {
                             this.state.projects.map(project => {
                                 return(
                                     <div key={project.id} className={`card-conatiner ${project.data.tag}`}>
-                                    <a href="./no-sidebar.html">
+                                    <span onClick={() => this.props.goToProject(project.data, true) } >
                                         <Tilt className="card" options={{maxTilt:20,glare:true,maxGlare:0.25,axis:'x'}}  > 
                                             <div className="background-img"></div>
                                             <div className="title-plate">
@@ -94,7 +95,7 @@ class PortfolioGallary extends Component {
                                                 </div>
                                             </div>
                                         </Tilt>
-                                    </a>
+                                    </span>
                                 </div>
                                 )
                             })

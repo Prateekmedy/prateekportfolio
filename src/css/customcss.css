@@ -634,6 +634,16 @@
     color: #2187d9;
 }
 
+#nav > ul > li > span{
+    color: #2F333B;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#nav > ul > li > span:hover{
+    color: #2187d9;
+}
+
 
 
 /*--------------- Media Query ---------------*/
