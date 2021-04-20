@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import RadarSkillsChart from './RadarSkillsChart'
-import PortfolioGallary from './PortfolioGalary'
+import RadarSkillsChart from './RadarSkillsChart';
+import PortfolioGallary from './PortfolioGalary';
+import ContactForm from './ContactForm';
 import Hi from '../svg/Hi.svg';
 import MyName from '../svg/I-am-Prateek.svg';
 import Designation from '../svg/a-Web-Creator.svg';
@@ -15,7 +16,7 @@ class LandingPage extends Component {
     constructor(props){
         super(props);
     }
-    state = {  }
+    
     render() { 
         console.log("Landing Page mounted");
         return ( 
@@ -97,29 +98,9 @@ class LandingPage extends Component {
                         </header>
                         <div className="row">
                             <div className="col-6 col-12-medium">
-
-                                    <section>
-                                        <form method="post" action="#">
-                                            <div className="row gtr-50">
-                                                <div className="col-6 col-12-small">
-                                                    <input type="text" name="name" id="contact-name" placeholder="Name" />
-                                                </div>
-                                                <div className="col-6 col-12-small">
-                                                    <input type="text" name="email" id="contact-email" placeholder="Email" />
-                                                </div>
-                                                <div className="col-12">
-                                                    <textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
-                                                </div>
-                                                <div className="col-12">
-                                                    <ul className="actions">
-                                                        <li><input type="submit" className="style1" value="Send" /></li>
-                                                        <li><input type="reset" className="style2" value="Reset" /></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </section>
-
+                                <section>
+                                    <ContactForm />
+                                </section>
                             </div>
                             <div className="col-6 col-12-medium">
 
