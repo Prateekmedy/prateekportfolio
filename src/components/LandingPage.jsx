@@ -86,7 +86,6 @@ class LandingPage extends Component {
                         <section className="portfolio section">
                             <PortfolioGallary portfolioRecord={this.props.portfolioRecord} goToProject={this.props.goToProject} />
                         </section>
-
                     </div>
                 </section>
 

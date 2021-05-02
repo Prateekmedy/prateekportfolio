@@ -5,7 +5,7 @@ class PortfolioGallary extends Component {
     
     constructor(props){
         super(props);
-        console.log(props.portfolioRecord.projects);
+        console.log(props.portfolioRecord);
         this.state = {
             projects : props.portfolioRecord.projects
         }
@@ -79,17 +79,15 @@ class PortfolioGallary extends Component {
                             this.state.projects.map(project => {
                                 return(
                                     <div key={project.id} className={`card-conatiner ${project.data.tag}`}>
-                                    <span onClick={() => this.props.goToProject(project.data, true) } >
+                                    <span onClick={() => this.props.goToProject(project.data, true)} >
                                         <Tilt className="card" options={{maxTilt:20,glare:true,maxGlare:0.25,axis:'x'}}  > 
-                                            <div className="background-img"></div>
+                                            <div className="background-img" style={{background:"url('https://gateway.ipfs.io/ipfs/"+ project.data.images[0] +  "')", backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}></div>
                                             <div className="title-plate">
-                                                <div className="portfolio-title">DigiVote</div>
+                                                <div className="portfolio-title">{project.data.name}</div>
                                                 <div className="tech-badge-container">
                                                     {
-                                                        project.data.tools.map(tool=>{
-                                                            return( 
-                                                                <div key={tool} className="tech-badge">{tool}</div>
-                                                            )
+                                                        project.data.tools.map((tool, index) => {
+                                                            if(index<3) return <div key={tool} className="tech-badge">{tool}</div>                             
                                                         })
                                                     }
                                                 </div>

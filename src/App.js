@@ -36,13 +36,10 @@ class App extends Component {
 
 	waitForData = () => {
 		if(this.state.portfolioRecord.projects != undefined && this.state.portfolioRecord.projects.length > 0){
-			console.log("yaaha aagaya");
 			this.setState({loader:false});
 			clearInterval(this.loading);
 		}	
 	}
-
-	
 
     fetchCompleteData = async() => {
         const daoUtilObj = new DaoUtil();
@@ -51,32 +48,32 @@ class App extends Component {
         await daoUtilObj.getPortfolioRecord.then(projects => {
             this.setState({ portfolioRecord : { ...this.state.portfolioRecord, projects} })
         },error => {
-            console.log(error)
+            console.error(error)
         })
         await daoUtilObj.getPersonalRecord.then(personal => {
             this.setState({ personalRecord : { ...this.state.personalRecord, personal} })
         },error => {
-            console.log(error)
+            console.error(error)
         })
         await daoUtilObj.getSkillsRecord.then(skill => {
             this.setState({ skillsRecord : { ...this.state.skillsRecord, skill} })
         },error => {
-            console.log(error)
+            console.error(error)
         })
-        await daoUtilObj.getCertificatesRecord.then(cert => {
-            this.setState({ certRecord : { ...this.state.certRecord, cert} })
-        },error => {
-            console.log(error)
-        })
+        // await daoUtilObj.getCertificatesRecord.then(cert => {
+        //     this.setState({ certRecord : { ...this.state.certRecord, cert} })
+        // },error => {
+        //     console.error(error)
+        // })
         await daoUtilObj.getContactRecord.then(contact => {
             this.setState({ contactRecord : { ...this.state.contactRecord, contact} })
         },error => {
-            console.log(error)
+            console.error(error)
         })
         await daoUtilObj.getSocialRecord.then(social => {
             this.setState({ socialRecord : { ...this.state.socialRecord, social} })
         },error => {
-            console.log(error)
+            console.error(error)
         })
     }	
 

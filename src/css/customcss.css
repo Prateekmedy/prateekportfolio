@@ -304,9 +304,9 @@
 .background-img{
     height : 100%;
     width : 100%;
-    background : url('https://wallpaperaccess.com/full/30100.jpg');
+    /* background : url('https://wallpaperaccess.com/full/30100.jpg');
     background-size : cover;
-    background-repeat : no-repeat;
+    background-repeat : no-repeat; */
     transition:0.5s ease;
     border-radius:8px;
     
@@ -325,14 +325,14 @@
     transform:translateZ(50px) translateY(-50%) translateX(100px) scale(0.8);
     transition: 0.5s ease;
     border-radius:8px;
-    padding: 0 3px 0 3px;
+    padding: 0 10px 0 10px;
 }
 
 .portfolio-title{
     height:auto;
     width:100%;
-    font-size:2em;
-    padding:8px 0px 0px 0px;
+    font-size:1.5em;
+    padding:10px 0px 0px 0px;
     text-align:center;
     color:#fff;
     letter-spacing:0.030em;
@@ -532,6 +532,10 @@
     border-radius: 30px;
     background: #EF5350;
     text-align: center;
+}
+
+#contact-email{
+    line-height: 1em;
 }
 
 /* .myLogo-icon{

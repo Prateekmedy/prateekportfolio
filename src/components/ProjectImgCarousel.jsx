@@ -12,12 +12,7 @@ class ProjectImgCarousel extends React.Component {
             pageDots: true,
             wrapAround: true
         }
-    }
-    componentDidMount = () => {
-      // You can register events in componentDidMount hook
-      
-    }
-  
+    }  
   
     render() {
         console.log("ProjectImgCarousel mounted");

@@ -18,7 +18,7 @@ class ContactForm extends Component {
         let emialErr = '', messageErr = '';
 
         if(!(email.length >= 5 && email.includes('@') && email.includes('.'))){
-            if(email != ''){
+            if(email !== ''){
                 evt.preventDefault();
                 emialErr = 'Email field is invalid';
             }else{
@@ -27,7 +27,7 @@ class ContactForm extends Component {
         }
 
         if(message.length <= 8){
-            if(message != ''){
+            if(message !== ''){
                 evt.preventDefault();
                 messageErr = 'Message field is invalid';
             }else{
@@ -35,14 +35,14 @@ class ContactForm extends Component {
             }                 
         }
 
-        if(messageErr == '' & emialErr == ''){
+        if(messageErr === '' & emialErr === ''){
             $('.error-message').hide();
         }else{
-            let errMsg = (messageErr != '')
-                            ?(emialErr != '')
+            let errMsg = (messageErr !== '')
+                            ?(emialErr !== '')
                                 ?messageErr + ' & ' + emialErr
                                 :messageErr
-                            :(emialErr != '')
+                            :(emialErr !== '')
                                 ?emialErr
                                 :'';
 

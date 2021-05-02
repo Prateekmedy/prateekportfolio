@@ -70,7 +70,7 @@ class ProjectPage extends Component {
                                     <br/>	
                                     Tech Stack: Ethereum Blockchain. ReactJS. Web3JS. IPFS : for decentralize data storage.</p>
                                     <br/>	
-                                    <p>Features:
+                                    <div>Features:
                                         <ul>
                                         <li>Organizer & Candidate Registration</li>
                                         <li>Election Creation</li>
@@ -79,7 +79,7 @@ class ProjectPage extends Component {
                                         <li>Scheduled Result.</li>
                                         <li>Scheduled Analysis Report.</li>
                                         </ul>
-                                    </p>
+                                    </div>
                                 </article>
                             </div>
 
