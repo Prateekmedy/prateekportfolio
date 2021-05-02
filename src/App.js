@@ -28,22 +28,21 @@ class App extends Component {
 
     componentDidMount(){
         this.fetchCompleteData();
-		setTimeout(() => {
-			this.setState({ loader : false })
-		}, 2000)
-		// this.loading = setInterval(this.waitForData(), 500);
+		// setTimeout(() => {
+		// 	this.setState({ loader : false })
+		// }, 2000)
+		this.loading = setInterval(this.waitForData, 500);
     }
 
 	waitForData = () => {
 		if(this.state.portfolioRecord.projects != undefined && this.state.portfolioRecord.projects.length > 0){
-			this.setState({loader:false});
+            this.setState({loader:false});
 			clearInterval(this.loading);
 		}	
 	}
 
     fetchCompleteData = async() => {
         const daoUtilObj = new DaoUtil();
-        // console.log(daoUtilObj);
         
         await daoUtilObj.getPortfolioRecord.then(projects => {
             this.setState({ portfolioRecord : { ...this.state.portfolioRecord, projects} })

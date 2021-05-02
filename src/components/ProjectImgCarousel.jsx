@@ -16,16 +16,19 @@ class ProjectImgCarousel extends React.Component {
   
     render() {
         console.log("ProjectImgCarousel mounted");
+        console.log(this.props.projectImages)
       return (
         <Flickity 
             className={'carousel'}      
             options={this.flickityOptions} 
         >
-          <div className="carousel-cell"></div>
-          <div className="carousel-cell"></div>
-          <div className="carousel-cell"></div>
-          <div className="carousel-cell"></div>
-          <div className="carousel-cell"></div>
+          {
+            this.props.projectImages.map(image => {
+              return(
+                <div key={image} className="carousel-cell" style={{backgroundImage:"url('"+ image +  "')", backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat'}}></div>
+              )
+            })
+          }
         </Flickity>
       )
     }

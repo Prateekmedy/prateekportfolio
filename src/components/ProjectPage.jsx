@@ -14,11 +14,29 @@ class ProjectPage extends Component {
 
     componentDidMount(){
         console.log(this.props.selectedProject);
+        console.log(window.scrollY)
+        window.scrollTo(0,0);
+        // window.addEventListener('scroll',this.callAtMiddle);
     }
+
+    // callAtMiddle = () => {
+    //     let posY = window.scrollY;
+    //     if(posY > 500){
+    //         this.handleVisibility();
+    //     }else{
+    //         console.log("HIDE kro")
+    //     }
+    // }
+
+    // handleVisibility = () => {
+    //     console.log("visible")
+    // }
 
     state = {  }
     render() { 
         console.log("ProjectPage mounted");
+        let project_url = this.props.selectedProject.link;
+        let project_github_url = this.props.selectedProject['github link'];
         return ( 
             <div id="page-wrapper">
                 <section id="header" className="wrapper">
@@ -52,33 +70,37 @@ class ProjectPage extends Component {
                             <div id="content">
                                 <article className="box post">
                                     <header className="portfolio-title-name">
-                                        <h2>DigiVote</h2>
-                                        <p>Digital Decentralized Voting App powered by Bockchain</p>
+                                        <h2>{this.props.selectedProject.name}</h2>
+                                        <p>{this.props.selectedProject.title}</p>
                                     </header>
                                     <div className="portfolio-gallary">
-                                        <ProjectImgCarousel />
+                                        <ProjectImgCarousel projectImages={this.props.selectedProject.images}/>
                                     </div>
                                     <div className="tech-badge-container2">
-                                        <div className="tech-badge2">Etherium Blockchain</div>
-                                        <div className="tech-badge2">ReactJS</div>
-                                        <div className="tech-badge2">Web3JS</div>
-                                        <div className="tech-badge2">IPFS</div>
+                                        {
+                                            this.props.selectedProject.tools.map(tool => {
+                                                return(
+                                                    <div className="tech-badge2" key={tool}>{tool}</div>
+                                                )
+                                            })
+                                        }
                                     </div>
-                                    <p>This Project is the Implementation of how the Blockchain Technology use for Our Indian Election Voting System. Through Blockchain we can assured the Vote security and transparency in the Elections.
-                                    <br/>
-                                    This is the approach to implement the complete Election System over the Blockchain serves online and it is completely Distributed and Decentralized.
-                                    <br/>	
-                                    Tech Stack: Ethereum Blockchain. ReactJS. Web3JS. IPFS : for decentralize data storage.</p>
-                                    <br/>	
-                                    <div>Features:
-                                        <ul>
-                                        <li>Organizer & Candidate Registration</li>
-                                        <li>Election Creation</li>
-                                        <li>Nomination of Candidate for Election.</li>
-                                        <li>Voting by Voter.</li>
-                                        <li>Scheduled Result.</li>
-                                        <li>Scheduled Analysis Report.</li>
-                                        </ul>
+                                    <div>
+                                        {
+                                            (project_url !== '')
+                                            && (
+                                                <div className="project-link">Project Link: <a href={project_url} target="_blank">{project_url}</a></div>
+                                            ) 
+                                        }
+                                        {
+                                            (project_github_url !== '')
+                                            && (
+                                                <div className="project-link">Project Github Link: <a href={project_github_url} target="_blank">{project_github_url}</a></div>
+                                            )
+                                        }
+                                    </div>
+                                    <div className="project-description">
+                                        {this.props.selectedProject.description}
                                     </div>
                                 </article>
                             </div>
@@ -93,6 +115,10 @@ class ProjectPage extends Component {
                             
                             </div>
 
+                         {/* Back Button */}
+                            <div className="back_btn" onClick={() => this.props.goToProject([], false)}>
+                                <span><i className="fas fa-arrow-left back_icon"></i></span>
+                            </div>
                     </div>
                 </div>
                 
