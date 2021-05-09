@@ -23,7 +23,7 @@ class MainPage extends Component {
                 {
                     this.state.isProjectOpen?
                     <ProjectPage selectedProject={this.state.selectedProject} goToProject={this.goToProject}/>
-                    :<LandingPage portfolioRecord={this.props.portfolioRecord} personalRecord={this.props.personalRecord} goToProject={this.goToProject}/>
+                    :<LandingPage portfolioRecord={this.props.portfolioRecord} personalRecord={this.props.personalRecord} skillsRecord={this.props.skillsRecord} goToProject={this.goToProject}/>
                 }
             </>
          );

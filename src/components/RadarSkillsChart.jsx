@@ -4,12 +4,13 @@ import ReactApexChart from 'react-apexcharts'
 export default class RadarSkillsChart extends Component {
     constructor(props) {
       super(props);
-
+      console.log(Object.keys(this.props.skillsRecord.skill));
+      console.log(Object.values(this.props.skillsRecord.skill));
       this.state = {
       
         series: [{
           name: 'Skills',
-          data: [100, 80, 70, 80, 95, 60],
+          data: Object.values(this.props.skillsRecord.skill),
         }],
         options: {
           chart: {
@@ -20,7 +21,7 @@ export default class RadarSkillsChart extends Component {
             text: 'Major Skills I Have'
           },
           xaxis: {
-            categories: ['Javascript', 'ReactJS', 'Blockchain', 'Servicenow', 'UI/UX', 'Firebase/MongoDB']
+            categories: Object.keys(this.props.skillsRecord.skill)
           },
           dataLabels: {
             enabled: false,

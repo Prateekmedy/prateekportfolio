@@ -25,7 +25,7 @@ class ProjectImgCarousel extends React.Component {
           {
             this.props.projectImages.map(image => {
               return(
-                <div key={image} className="carousel-cell" style={{backgroundImage:"url('"+ image +  "')", backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat'}}></div>
+                <div key={image} className="carousel-cell" style={{backgroundImage:`url(${image})`, backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat'}}></div>
               )
             })
           }

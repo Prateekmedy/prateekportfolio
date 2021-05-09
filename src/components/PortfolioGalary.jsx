@@ -82,7 +82,7 @@ class PortfolioGallary extends Component {
                                     <div key={project.id} className={`card-conatiner ${project.data.tag}`}>
                                     <span onClick={() => this.props.goToProject(project.data, true)} >
                                         <Tilt className="card" options={{maxTilt:20,glare:true,maxGlare:0.25,axis:'x'}}  > 
-                                            <div className="background-img" style={{backgroundImage:"url('"+ project.data.images[0] + "')", backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat'}}></div>
+                                            <div className="background-img" style={{backgroundImage:`url(${project.data.display_image})`, backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat'}}></div>
                                             <div className="title-plate">
                                                 <div className="portfolio-title">{project.data.name}</div>
                                                 <div className="tech-badge-container">

@@ -843,7 +843,7 @@ html{
     }
 
     #skillsChart{
-        height: 300px;
+        height: 350px;
     }
 
     .about-discription {
@@ -859,5 +859,25 @@ html{
     .card{
         height: 150px;
         width: 210px;
+    }
+
+    .portfolio-gallary{
+        height: 200px;
+    }
+
+    .carousel {
+        height: 160px;
+    }
+
+    .carousel-cell {
+        height: 160px;
+    }
+
+    .flickity-prev-next-button.next {
+        right: -20px;
+    }
+
+    .flickity-prev-next-button.previous {
+        left: -20px;
     }
 }

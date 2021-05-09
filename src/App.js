@@ -84,7 +84,7 @@ class App extends Component {
 				{
 					this.state.loader?
 					<Loader />
-					:<MainPage portfolioRecord={this.state.portfolioRecord} personalRecord={this.state.personalRecord} />
+					:<MainPage portfolioRecord={this.state.portfolioRecord} personalRecord={this.state.personalRecord} skillsRecord={this.state.skillsRecord} />
 				}
 			</>
 		)};
