@@ -78,13 +78,13 @@ class App extends Component {
 
 	render(){
 		console.log("App mounted");
-	
+        console.log(this.state.personalRecord)
 		return (
 			<>
 				{
 					this.state.loader?
 					<Loader />
-					:<MainPage portfolioRecord={this.state.portfolioRecord} />
+					:<MainPage portfolioRecord={this.state.portfolioRecord} personalRecord={this.state.personalRecord} />
 				}
 			</>
 		)};

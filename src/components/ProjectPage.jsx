@@ -5,6 +5,7 @@ import MyName from '../svg/I-am-Prateek.svg';
 import Designation from '../svg/a-Web-Creator.svg';
 import LeftBlack from '../svg/Group2.svg';
 import LogoConatiner from '../svg/Group1.svg';
+import parse from 'html-react-parser';
 
 class ProjectPage extends Component {
     constructor(props){
@@ -14,7 +15,6 @@ class ProjectPage extends Component {
 
     componentDidMount(){
         console.log(this.props.selectedProject);
-        console.log(window.scrollY)
         window.scrollTo(0,0);
         // window.addEventListener('scroll',this.callAtMiddle);
     }
@@ -37,6 +37,7 @@ class ProjectPage extends Component {
         console.log("ProjectPage mounted");
         let project_url = this.props.selectedProject.link;
         let project_github_url = this.props.selectedProject['github link'];
+        let project_youtube_url = this.props.selectedProject.youtube_link;
         return ( 
             <div id="page-wrapper">
                 <section id="header" className="wrapper">
@@ -93,6 +94,12 @@ class ProjectPage extends Component {
                                             ) 
                                         }
                                         {
+                                            (project_youtube_url !== '')
+                                            && (
+                                                <div className="project-link">Project Youtube Link: <a href={project_youtube_url} target="_blank">{project_youtube_url}</a></div>
+                                            )
+                                        }
+                                        {
                                             (project_github_url !== '')
                                             && (
                                                 <div className="project-link">Project Github Link: <a href={project_github_url} target="_blank">{project_github_url}</a></div>
@@ -100,7 +107,9 @@ class ProjectPage extends Component {
                                         }
                                     </div>
                                     <div className="project-description">
-                                        {this.props.selectedProject.description}
+                                        {
+                                            parse(this.props.selectedProject.description)
+                                        }
                                     </div>
                                 </article>
                             </div>

@@ -80,8 +80,8 @@ class ContactForm extends Component {
                         </div>
                         <div className="col-12">
                             <ul className="actions">
-                                <li><input type="submit" className="style1" value="Send" onClick={evt => this.sendMail(evt)} /></li>
-                                <li><input type="reset" className="style2" value="Reset" onClick={evt => this.resetMail(evt)} /></li>
+                                <li><input type="submit" className="style1 send-email-btn" value="Send" onClick={evt => this.sendMail(evt)} /></li>
+                                <li><input type="reset" className="style2 reset-email-btn" value="Reset" onClick={evt => this.resetMail(evt)} /></li>
                             </ul>
                         </div>
                     </div>
