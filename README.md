@@ -19,23 +19,21 @@ https://prateekmedy.github.io/prateekportfolio
 
 #### Some of the ScreenShots:
 
-##### DigiVote Home Page
-![DigiVote HomePage](https://images2.imgbox.com/38/f4/81i8egYE_o.jpg)
+##### Portfolio 2.0 Landing Section
+<img src="https://images2.imgbox.com/93/ee/gMLupjUW_o.png" alt="Portfolio 2.0 Landing Section" height="290" width="601"/>
 
-##### DigiVote Live Election
-![DigiVote HomePage](https://images2.imgbox.com/94/e6/5LcB3MwJ_o.jpg)
+##### Portfolio 2.0 About Section
+<img src="https://images2.imgbox.com/46/b3/OvSF3E9e_o.png" alt="Portfolio 2.0 About Section" height="290" width="601"/>
 
-##### DigiVote Org. Login
-![DigiVote HomePage](https://images2.imgbox.com/f1/65/cz7ix8H0_o.jpg)
+##### Portfolio 2.0 Portfolio Section
+<img src="https://images2.imgbox.com/0c/8f/q2YnbBNq_o.png" alt="Portfolio 2.0 Portfolio Section" height="290" width="601"/>
 
-##### DigiVote Voting Area
-![DigiVote HomePage](https://images2.imgbox.com/25/69/JJxYlNmZ_o.jpg)
+##### Portfolio 2.0 Project Section
+<img src="https://images2.imgbox.com/b6/37/IUCMLAga_o.png" alt="Portfolio 2.0 Project Section" height="290" width="601"/>
 
-##### DigiVote Election Result
-![DigiVote HomePage](https://images2.imgbox.com/72/16/NFEKa2BT_o.jpg)
+##### Portfolio 2.0 Contact Section
+<img src="https://images2.imgbox.com/b2/66/WGnNSTaN_o.png" alt="Portfolio 2.0 Contact Section" height="290" width="601"/>
 
-##### DigiVote Footer
-![DigiVote HomePage](https://images2.imgbox.com/16/c8/wA2VuMng_o.jpg)
 
 ---
 
