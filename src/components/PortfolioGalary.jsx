@@ -5,8 +5,6 @@ class PortfolioGallary extends Component {
     
     constructor(props){
         super(props);
-        console.log(props.portfolioRecord);
-        console.log(props.portfolioRecord.projects);
         this.state = {
             projects : props.portfolioRecord.projects
         }
@@ -20,7 +18,7 @@ class PortfolioGallary extends Component {
     filterSelection = c => {
         let x, i;
         x = document.getElementsByClassName("card-conatiner");
-        if (c == "all") c = "";
+        if (c === "all") c = "";
         for (i = 0; i < x.length; i++) {
             this.removeClass(x[i], "show");
             if (x[i].className.indexOf(c) > -1) this.addClass(x[i], "show");
@@ -32,7 +30,7 @@ class PortfolioGallary extends Component {
         arr1 = element.className.split(" ");
         arr2 = name.split(" ");
         for (i = 0; i < arr2.length; i++) {
-            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+            if (arr1.indexOf(arr2[i]) === -1) {element.className += " " + arr2[i];}
         }
     }
 
@@ -61,7 +59,7 @@ class PortfolioGallary extends Component {
     
 
     render() { 
-        console.log("PortfolioGallary mounted");
+        // console.log("PortfolioGallary mounted");
         return ( 
             <div className="container">
 							  
@@ -88,7 +86,8 @@ class PortfolioGallary extends Component {
                                                 <div className="tech-badge-container">
                                                     {
                                                         project.data.tools.map((tool, index) => {
-                                                            if(index<3) return <div key={tool} className="tech-badge">{tool}</div>                             
+                                                            if(index<3) { return ( <div key={tool} className="tech-badge">{tool}</div> ) }
+                                                            return null                           
                                                         })
                                                     }
                                                 </div>

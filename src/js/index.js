@@ -1,9 +1,7 @@
-
-// import $ from 'jquery'; 
 import ApexCharts from 'apexcharts';
+
 // import './isotope.pkgd.min.js';
 // import isotope from 'isotope-layout';
-console.log("chal rahi hai")
 //------ creating the filter gallary for the porfolio cards ------------
 
 // $('.filters ul li').click(function(){

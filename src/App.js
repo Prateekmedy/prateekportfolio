@@ -28,14 +28,11 @@ class App extends Component {
 
     componentDidMount(){
         this.fetchCompleteData();
-		// setTimeout(() => {
-		// 	this.setState({ loader : false })
-		// }, 2000)
 		this.loading = setInterval(this.waitForData, 500);
     }
 
 	waitForData = () => {
-		if(this.state.portfolioRecord.projects != undefined && this.state.portfolioRecord.projects.length > 0){
+		if(this.state.portfolioRecord.projects !== undefined && this.state.portfolioRecord.projects.length > 0){
             this.setState({loader:false});
 			clearInterval(this.loading);
 		}	
@@ -77,8 +74,7 @@ class App extends Component {
     }	
 
 	render(){
-		console.log("App mounted");
-        console.log(this.state.personalRecord)
+		// console.log("App mounted");
 		return (
 			<>
 				{

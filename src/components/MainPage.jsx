@@ -7,23 +7,23 @@ class MainPage extends Component {
         super(props);
         this.state = {
 			isProjectOpen : false,
-			selectedProject : []
+			selectedProject : [],
+            portfolioSection: false
         }  
     }
 
-    goToProject = (project, isProjectOpen) => {
-		console.log(project);
-		this.setState({ isProjectOpen : isProjectOpen, selectedProject : project });
+    goToProject = (project, isProjectOpen, portfolioSection) => {
+		this.setState({ isProjectOpen : isProjectOpen, selectedProject : project, portfolioSection });
 	}
 
     render() { 
-        console.log("MainPage mounted");
+        // console.log("MainPage mounted");
         return ( 
             <>
                 {
                     this.state.isProjectOpen?
                     <ProjectPage selectedProject={this.state.selectedProject} goToProject={this.goToProject}/>
-                    :<LandingPage portfolioRecord={this.props.portfolioRecord} personalRecord={this.props.personalRecord} skillsRecord={this.props.skillsRecord} goToProject={this.goToProject}/>
+                    :<LandingPage portfolioSection={this.state.portfolioSection} portfolioRecord={this.props.portfolioRecord} personalRecord={this.props.personalRecord} skillsRecord={this.props.skillsRecord} goToProject={this.goToProject}/>
                 }
             </>
          );

@@ -4,8 +4,7 @@ import ReactApexChart from 'react-apexcharts'
 export default class RadarSkillsChart extends Component {
     constructor(props) {
       super(props);
-      console.log(Object.keys(this.props.skillsRecord.skill));
-      console.log(Object.values(this.props.skillsRecord.skill));
+      
       this.state = {
       
         series: [{

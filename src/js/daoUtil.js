@@ -89,7 +89,7 @@ class DaoUtil {
                 });
                 // console.log(projects);
             })
-            .catch(err => console.log('error in getPortfolioRecord '+err))
+            .catch(err => console.error('error in getPortfolioRecord '+err))
 
         
         resolve(projects)

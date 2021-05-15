@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Flickity from 'react-flickity-component'
 
-class ProjectImgCarousel extends React.Component {
+class ProjectImgCarousel extends Component {
 
     constructor(props){
         super(props)
@@ -15,8 +15,7 @@ class ProjectImgCarousel extends React.Component {
     }  
   
     render() {
-        console.log("ProjectImgCarousel mounted");
-        console.log(this.props.projectImages)
+        // console.log("ProjectImgCarousel mounted");
       return (
         <Flickity 
             className={'carousel'}      
