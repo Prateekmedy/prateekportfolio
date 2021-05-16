@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/prateekportfolio/static/css/main.d1b72a8d.chunk.css",
-    "main.js": "/prateekportfolio/static/js/main.cd12a5a9.chunk.js",
-    "main.js.map": "/prateekportfolio/static/js/main.cd12a5a9.chunk.js.map",
+    "main.js": "/prateekportfolio/static/js/main.551caca4.chunk.js",
+    "main.js.map": "/prateekportfolio/static/js/main.551caca4.chunk.js.map",
     "runtime-main.js": "/prateekportfolio/static/js/runtime-main.f09aa098.js",
     "runtime-main.js.map": "/prateekportfolio/static/js/runtime-main.f09aa098.js.map",
     "static/js/2.8ce7774c.chunk.js": "/prateekportfolio/static/js/2.8ce7774c.chunk.js",
@@ -19,6 +19,7 @@
     "static/media/Hi.c4d58d4d.svg": "/prateekportfolio/static/media/Hi.c4d58d4d.svg",
     "static/media/I-am-Prateek.3aa74916.svg": "/prateekportfolio/static/media/I-am-Prateek.3aa74916.svg",
     "static/media/Line1.418838fc.svg": "/prateekportfolio/static/media/Line1.418838fc.svg",
+    "static/media/MyResume.125bbe6f.pdf": "/prateekportfolio/static/media/MyResume.125bbe6f.pdf",
     "static/media/a-Web-Creator.a28b8725.svg": "/prateekportfolio/static/media/a-Web-Creator.a28b8725.svg",
     "static/media/main.css": "/prateekportfolio/static/media/overlay.c5ca565b.png",
     "static/media/customcss.css": "/prateekportfolio/static/media/myLogo-transparent.6ec1e7b2.svg"
@@ -27,6 +28,6 @@
     "static/js/runtime-main.f09aa098.js",
     "static/js/2.8ce7774c.chunk.js",
     "static/css/main.d1b72a8d.chunk.css",
-    "static/js/main.cd12a5a9.chunk.js"
+    "static/js/main.551caca4.chunk.js"
   ]
 }
