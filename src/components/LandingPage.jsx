@@ -10,6 +10,7 @@ import Right from '../svg/Group3.svg';
 import Left from '../svg/Group4.svg';
 import NamePlate from '../svg/Line1.svg';
 import LogoConatiner from '../svg/Group1.svg';
+import MyResume from '../documents/MyResume.pdf'
 
 class LandingPage extends Component {
 
@@ -19,7 +20,6 @@ class LandingPage extends Component {
         }else{
             window.scrollTo(0,0);
         }
-        
     }
     
     render() { 
@@ -72,7 +72,7 @@ class LandingPage extends Component {
                                 <div className="resume-btn-container">
                                     <a href="https://prateekmedy.github.io/prateekresume" target="_blank" rel="noreferrer" className="btn resume-btn">View Resume</a>
                                     <div className="fab_icon">
-                                        <a href="/build/assets/documents/MyResume.pdf" download="Prateek_Patel_Resume_Web_Developer"><i className="fas fa-cloud-download-alt save_icon"></i></a>
+                                        <a href={MyResume} download="Prateek_Patel_Resume_Web_Developer"><i className="fas fa-cloud-download-alt save_icon"></i></a>
                                     </div>
                                 </div>
                             </div>
